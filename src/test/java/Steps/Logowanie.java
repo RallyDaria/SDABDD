@@ -7,16 +7,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Logowanie {
+
+    WebDriver driver;
+
     @Given("Uzytkownik otwiera przegladarke")
     public void testUzytkownikOtwieraPrzegladarke(){
         System.out.println("Uzytkownik otworzyl przegladarke");
         System.setProperty("webdriver.chrome.driver","C:/Users/zblewski/Desktop/chromdriver/chromedriver107.exe");
-        WebDriver dricer = new ChromeDriver();
+         driver = new ChromeDriver();
+         driver.manage().window().maximize();
     }
 
     @Given("Uzytkownik wpisuje adres https:\\/\\/the-internet.herokuapp.com\\/login")
     public void uzytkownik_wpisuje_adres_https_the_internet_herokuapp_com_login() {
         System.out.println("Uzytkownik wpisuje adres strony internetowej");
+        driver.navigate().to("https://the-internet.herokuapp.com/login");
     }
     @When("Uzytkownik wpisuje poprawny username")
     public void uzytkownik_wpisuje_poprawny_username() {
