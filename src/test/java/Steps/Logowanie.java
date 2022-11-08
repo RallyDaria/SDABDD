@@ -28,6 +28,7 @@ public class Logowanie {
     public void uzytkownik_wpisuje_poprawny_username() {
         System.out.println("Uzytkownik wpisuje poprawny login");
         driver.findElement(By.id("username")).sendKeys("tomsmith");
+
     }
     @When("Uzytkownik wpisuje poprawne haslo")
     public void uzytkownik_wpisuje_poprawne_haslo() {
