@@ -3,12 +3,17 @@ package Steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Logowanie {
     @Given("Uzytkownik otwiera przegladarke")
     public void testUzytkownikOtwieraPrzegladarke(){
         System.out.println("Uzytkownik otworzyl przegladarke");
+        System.setProperty("webdriver.chrome.driver","C:/Users/zblewski/Desktop/chromdriver/chromedriver107.exe");
+        WebDriver dricer = new ChromeDriver();
     }
+
     @Given("Uzytkownik wpisuje adres https:\\/\\/the-internet.herokuapp.com\\/login")
     public void uzytkownik_wpisuje_adres_https_the_internet_herokuapp_com_login() {
         System.out.println("Uzytkownik wpisuje adres strony internetowej");
@@ -25,6 +30,7 @@ public class Logowanie {
     public void uzytkownik_klika_przycisk_login() {
         System.out.println("Uzytkownik klika przycisk Login");
     }
+
     @Then("Uzytkownik zostal poprawnie zalogowany")
     public void uzytkownik_zostal_poprawnie_zalogowany() {
         System.out.println("Uzytkownik zostal poprawnie zalogowany");
