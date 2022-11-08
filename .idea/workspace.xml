@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="defb0ac7-40f6-43f5-9501-dd4131da2408" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/CucamberOptions/TestRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Features/logowanie.feature" afterDir="false" />
+    <list default="true" id="defb0ac7-40f6-43f5-9501-dd4131da2408" name="Changes" comment="maven wstęp do pisania testów jednostkowych">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Steps/Logowanie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CucamberOptions/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CucamberOptions/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Features/logowanie.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Features/logowanie.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +73,14 @@
       <option name="presentableId" value="Default" />
       <updated>1667927707755</updated>
     </task>
+    <task id="LOCAL-00001" summary="maven wstęp do pisania testów jednostkowych">
+      <created>1667931584169</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667931584169</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -85,5 +93,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="maven wstęp do pisania testów jednostkowych" />
+    <option name="LAST_COMMIT_MESSAGE" value="maven wstęp do pisania testów jednostkowych" />
   </component>
 </project>
