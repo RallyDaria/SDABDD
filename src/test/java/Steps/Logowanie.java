@@ -3,6 +3,7 @@ package Steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -26,6 +27,7 @@ public class Logowanie {
     @When("Uzytkownik wpisuje poprawny username")
     public void uzytkownik_wpisuje_poprawny_username() {
         System.out.println("Uzytkownik wpisuje poprawny login");
+        driver.findElement(By.id("username")).sendKeys("tomsmith");
     }
     @When("Uzytkownik wpisuje poprawne haslo")
     public void uzytkownik_wpisuje_poprawne_haslo() {
