@@ -42,6 +42,23 @@ public class Logowanie {
         System.out.println("Uzytkownik wpisuje adres strony internetowej");
         driver.navigate().to("https://the-internet.herokuapp.com/login");
     }
+// inny sposób na uruchomienie strony
+    //Given Uzytkownik wpisuje adres https://the-internet.herokuapp.com/login
+    @Given("Uzytkownik wpisuje adres {string}")
+    public void uzytkownik_wpisuje_w_pole_username2(String url) {
+        driver.navigate().to(url);
+    }
+// inny sposób wpisywania nazwy
+    @When("Uzytkownik wpisuje {string} w pole username")
+    public void uzytkownik_wpisuje_w_pole_username(String nazwaUzytkownika) {
+        driver.findElement(By.id("username")).sendKeys(nazwaUzytkownika);
+    }
+    //Uzytkownik wpisuje "SuperSecretPassword!" w pole pasword
+    @When("Uzytkownik wpisuje {string} w pole pasword")
+    public void uzytkownik_wpisuje_w_pole_pasword(String haslo) {
+      driver.findElement(By.id("password")).sendKeys(haslo);
+    }
+
     @When("Uzytkownik wpisuje poprawny username")
     public void uzytkownik_wpisuje_poprawny_username() {
         System.out.println("Uzytkownik wpisuje poprawny login");
@@ -82,6 +99,7 @@ public class Logowanie {
         Assert.assertEquals("https://the-internet.herokuapp.com/login", driver.getCurrentUrl());
         //driver.close();
     }
+
 
         @AfterAll
     public static void tearDown(){
