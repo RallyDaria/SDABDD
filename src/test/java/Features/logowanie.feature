@@ -1,5 +1,3 @@
-
-
 Feature: Logowanie do aplikacji
   Jako użytkownik chę mieć możliwość logowania
   do aplikacji a móc korzystać z zaawansowanych funkcji
@@ -26,7 +24,6 @@ Feature: Logowanie do aplikacji
     Then Uzytkownik zostal poprawnie zalogowany
 
 
-
   Scenario: Niepoprawne logowanie do aplikacji(druga wersja)
     Given Uzytkownik wpisuje adres "https://the-internet.herokuapp.com/login"
     When Uzytkownik wpisuje "tomsmith" w pole username
@@ -40,10 +37,23 @@ Feature: Logowanie do aplikacji
     And Uzytkownik wpisuje "  " w pole pasword
     And Uzytkownik klika przycisk Login
     Then Uzytkownik zostal poprawnie zalogowany
-@name
+
   Scenario: Niepoprawne logowanie do aplikacji(druga wersja)
     Given Uzytkownik wpisuje adres "https://the-internet.herokuapp.com/login"
     When Uzytkownik wpisuje "tomsmith" w pole username
     And Uzytkownik wpisuje "  " w pole pasword
     And Uzytkownik klika przycisk Login
     Then Uzytkownik zostal poprawnie zalogowany
+
+  @now
+  Scenario Outline: Niepoprawne logowanie
+    Given Uzytkownik wpisuje adres "https://the-internet.herokuapp.com/login"
+    When Uzytkownik wpisuje <nazwa uzytkownika> w pole username
+    And Uzytkownik wpisuje <haslo> w pole pasword
+    And Uzytkownik klika przycisk Login
+    Then Uzytkownik zostal poprawnie zalogowany
+
+    Examples:
+      | nazwaUzytkowanika | haslo                |
+      | tomsmith          | blabla               |
+      | tomsmith          | aaaa                 |

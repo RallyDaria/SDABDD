@@ -3,6 +3,7 @@ package Steps;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -100,6 +101,15 @@ public class Logowanie {
         //driver.close();
     }
 
+    @When("^Uzytkownik wpisuje (.+) w pole username$")
+    public void uzytkownik_wpisuje_w_pole_username3(String nazwauzytkownika)  {
+
+    }
+
+    @And("^Uzytkownik wpisuje (.+) w pole pasword$")
+    public void uzytkownik_wpisuje_w_pole_pasword3(String haslo)  {
+
+    }
 
         @AfterAll
     public static void tearDown(){
