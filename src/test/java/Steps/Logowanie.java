@@ -1,5 +1,8 @@
 package Steps;
 
+import io.cucumber.java.AfterAll;
+import io.cucumber.java.Before;
+import io.cucumber.java.BeforeAll;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -12,14 +15,26 @@ import org.openqa.selenium.edge.EdgeDriver;
 
 public class Logowanie {
 
-    WebDriver driver;
+    static WebDriver driver;
+
+    @BeforeAll
+    public static void setDriver(){
+        System.out.println("Uruchomienie przeed wszystkimi scenariuszami");
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+    }
+    @Before
+    public void before(){
+        System.out.println("Uruchomienie przed kazdym scenariuszem testowym ");
+    }
+
 
     @Given("Uzytkownik otwiera przegladarke")
     public void testUzytkownikOtwieraPrzegladarke(){
         System.out.println("Uzytkownik otworzyl przegladarke");
         //System.setProperty("webdriver.chrome.driver","C:/Users/zblewski/Desktop/chromdriver/chromedriver107.exe");
-         driver = new ChromeDriver();
-         driver.manage().window().maximize();
+       // driver = new ChromeDriver();
+       // driver.manage().window().maximize();
     }
 
     @Given("Uzytkownik wpisuje adres https:\\/\\/the-internet.herokuapp.com\\/login")
@@ -51,11 +66,11 @@ public class Logowanie {
     public void uzytkownik_zostal_poprawnie_zalogowany() {
         System.out.println("Uzytkownik zostal poprawnie zalogowany");
         Assert.assertEquals("https://the-internet.herokuapp.com/secure", driver.getCurrentUrl());
-        driver.close();
+        //driver.close();
     }
     @When("Uzytkownik wpisuje niepoprawne haslo")
     public void uzytkownik_wpisuje_niepoprawne_haslo() {
-        System.out.println("Uzytkowanik wpisuje poprawne haslo");
+        System.out.println("Uzytkowanik popełnia błąd w haśle");
         WebElement inputPassword = driver.findElement(By.id("password"));
         inputPassword.sendKeys("aaa");
 
@@ -65,9 +80,12 @@ public class Logowanie {
     public void uzytkownik_nie_zostal_poprawnie_zalogowany() {
         System.out.println("Uzytkownik nie zostal poprawnie zalogowany");
         Assert.assertEquals("https://the-internet.herokuapp.com/login", driver.getCurrentUrl());
-        driver.close();
+        //driver.close();
     }
 
-
+        @AfterAll
+    public static void tearDown(){
+            driver.close();
+        }
 
 }
