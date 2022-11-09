@@ -64,6 +64,10 @@ public class Logowanie {
     @Then("Uzytkownik nie zostal poprawnie zalogowany")
     public void uzytkownik_nie_zostal_poprawnie_zalogowany() {
         System.out.println("Uzytkownik nie zostal poprawnie zalogowany");
+        Assert.assertEquals("https://the-internet.herokuapp.com/login", driver.getCurrentUrl());
         driver.close();
     }
+
+
+
 }

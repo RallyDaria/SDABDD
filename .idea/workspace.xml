@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="defb0ac7-40f6-43f5-9501-dd4131da2408" name="Changes" comment="wpisywanie hasła loogowanie oraz zamykanie przeglądarki">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Features/logowanie.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Features/logowanie.feature" afterDir="false" />
+    <list default="true" id="defb0ac7-40f6-43f5-9501-dd4131da2408" name="Changes" comment="urzytkownik nie został zalogowany złe hasło Logownie 56">
       <change beforePath="$PROJECT_DIR$/src/test/java/Steps/Logowanie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Steps/Logowanie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668013928353</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="urzytkownik nie został zalogowany złe hasło Logownie 56">
+      <created>1668014435486</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1668014435486</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -142,6 +147,7 @@
     <MESSAGE value="logowanie 17 polecenie do otwieranie przegladarki oraz otwierania okna w pelnym ekranie" />
     <MESSAGE value="logowanie 30 polecenie do wpisywania danych do pola odpowiednio po API" />
     <MESSAGE value="wpisywanie hasła loogowanie oraz zamykanie przeglądarki" />
-    <option name="LAST_COMMIT_MESSAGE" value="wpisywanie hasła loogowanie oraz zamykanie przeglądarki" />
+    <MESSAGE value="urzytkownik nie został zalogowany złe hasło Logownie 56" />
+    <option name="LAST_COMMIT_MESSAGE" value="urzytkownik nie został zalogowany złe hasło Logownie 56" />
   </component>
 </project>
