@@ -100,15 +100,17 @@ public class Logowanie {
         Assert.assertEquals("https://the-internet.herokuapp.com/login", driver.getCurrentUrl());
         //driver.close();
     }
-
+    //Uzytkownik wpisuje <nazwa uzytkownika> w pole username
     @When("^Uzytkownik wpisuje (.+) w pole username$")
     public void uzytkownik_wpisuje_w_pole_username3(String nazwauzytkownika)  {
 
+        driver.findElement(By.id("username")).sendKeys(nazwauzytkownika);
     }
 
     @And("^Uzytkownik wpisuje (.+) w pole pasword$")
     public void uzytkownik_wpisuje_w_pole_pasword3(String haslo)  {
 
+        driver.findElement(By.id("password")).sendKeys(haslo);
     }
 
         @AfterAll

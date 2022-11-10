@@ -48,10 +48,10 @@ Feature: Logowanie do aplikacji
   @now
   Scenario Outline: Niepoprawne logowanie
     Given Uzytkownik wpisuje adres "https://the-internet.herokuapp.com/login"
-    When Uzytkownik wpisuje <nazwa uzytkownika> w pole username
+    When Uzytkownik wpisuje <nazwa Uzytkownika> w pole username
     And Uzytkownik wpisuje <haslo> w pole pasword
     And Uzytkownik klika przycisk Login
-    Then Uzytkownik zostal poprawnie zalogowany
+    Then Uzytkownik nie zostal poprawnie zalogowany
 
     Examples:
       | nazwaUzytkowanika | haslo                |
